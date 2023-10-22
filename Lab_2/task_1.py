@@ -6,12 +6,8 @@ increase = 0.05  # Ежемесячный рост цен
 # TODO Посчитайте количество  месяцев, которое можно протянуть без долгов
 mounth = 0
 while True:
-    if mounth == 0:
-        money_capital = money_capital + salary - spend
-        mounth += 1
-    else:
-        spend = spend * (1+increase)
-        money_capital = money_capital + salary - spend
+        money_capital += salary - spend
+        spend *= (1+increase)
         if money_capital < 0:
             break
         mounth += 1
