@@ -139,7 +139,7 @@ class IsoscelesTriangle(Triangle):
 class Rectangle(Shape):
 
     def __init__(self, width: Number, height: Number):
-        if not isinstance(width, Number) and isinstance(height, Number):
+        if not isinstance(width, Number) or not isinstance(height, Number):
             raise TypeError("Width and height should be numeric values")
         if width < 0 or height < 0:
             raise ValueError('Sides can\'t be less 0')
